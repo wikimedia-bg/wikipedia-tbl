@@ -45,3 +45,29 @@
  .*(?:http|https|ftp|mailto|torrent|ed2k)\:\/\/[\w\d:@\-]+\.[\w\d\-]+.*
  .*\bis\s+(?:a|an)\s+(?:dick|cunt|fag|bitch|shit|fuck|loser|ass|gay|ghey|moron|retard|stupid|slut).* <autoconfirmed>
  .*\bnimp\.org.*
+
+ .*(?i:админ).* <newaccountonly>
+ .*(\bм|М)(?i:одератор).* <newaccountonly>
+
+ .*\.(com|org|co\.uk|net|info|biz|bg|Bg|BG|ru|Ru)\b.* <newaccountonly>
+
+ .*(?i:wikipedo).* <newaccountonly>
+ .*\bNC [Ss]tate\b.*\b[Ii]s\b.* <newaccountonly>
+ .*(\bb|B)(?i:etacommand).* <newaccountonly>
+ .*(?i:fuquay).* <newaccountonly>
+
+ #Ограничение до 29 символа:
+ .{30,}.* <newaccountonly>
+
+ #Не повече от 9 последователни главни букви, дори да са разделени с интервали.
+ .* [A-ZА-Я ]{10,}.* <newaccountonly>
+
+ #Да не започва с !. 
+ ^! <newaccountonly>
+ (!!) <newaccountonly>
+
+ #Grawp: .*(?i:[GĜĞĠĢƓǤǦǴḠ69&Γ]((\W|\W.*\W)?[RŔŖŘȐȒṘṚṜṞ®Ρ₧ÞþΡρРрƤṔṖǷ](\W|\W.*\W)?)+([ǼAÀÁÂÃÄÅĀĂĄǍǞǠǺȀȂȦȺḀẠẢẤẦẨẪẬẮẰẲẴẶÆǢ4@?Α](\W|\W.*\W)?)+([VƲṼṾWŴẀẂẄẆẈ₩UÙÚÛÜŨŪŬŮŰŲǓǕǗǙǛΫΥΫΎ](\W|\W.*\W)?)+[PƤṔṖǷ₧ÞþΡρРр]).* <newaccountonly>
+
+ #Свастики:
+ .*卍.* <newaccountonly>
+ .*卐.* <newaccountonly>
