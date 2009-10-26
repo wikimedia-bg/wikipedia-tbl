@@ -29,7 +29,7 @@
  ^‹[^›]*$ <errmsg=titleblacklist-custom-quote1> # Заглавия, започващи с ‹, но без затваряща ›; използва се [[МедияУики:titleblacklist-custom-quote1|специално съобщение за грешка]]
  
  # Забрана за създаване на страници в ИП Картинка
- ^(?:Картинка|Image)\:.+ <errmsg=titleblacklist-custom-image> # Използва се [[МедияУики:titleblacklist-custom-image|специално съобщение за грешка]]
+ ^(?:Картинка|Image|Файл|File)\:.+ <errmsg=titleblacklist-custom-image> # Използва се [[МедияУики:titleblacklist-custom-image|специално съобщение за грешка]]
  
  # Пунктуация
  .*[!?‽¿]{3,}.*
