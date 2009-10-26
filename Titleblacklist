@@ -9,72 +9,69 @@
  # Do not use literal non-breaking spaces in regexes; some browsers cannot handle them.
  
  # Символи, приличащи на ASCII букви
- .*[ℂ℃℄ℇ℈℉ℊℋℌℍℎℏℐℑℒℓℕ℗℘ℙℚℛℜℝ℞℟℣ℤℨ℩ℬℭ℮ℯℰℱℲℳℴℹ℺⅁⅂⅃⅄ⅅⅆⅇⅈⅉⅎ].* # Буквоподобни символи, с изключение на символите за Келвин, ангстрьом и ом.
+ .*[คℂ℃℄ยี่ℇ℈℉ℊๆℋℌℍℎℏนℐℑℒℕ℗℘ℙℚℛℜℝ℞℟๔℣ℤℨ℩ℬℭ℮ℯℰℱℲℳℴℹ℺⅁⅂⅃⅄ⅅⅆⅇⅈⅉⅎ].* <casesensitive> # Буквоподобни символи, с изключение на символите за Келвин, ангстрьом и ом.
  .*[\x{249C}-\x{24E9}].* # Символи на латински букви в кръгче или в скоби
  .*[\x{FF21}-\x{FF3A}\x{FF41}-\x{FF5A}].* # Fullwidth латински букви
- .*[？ʖ؟ʔ].* # Символи, наподобяващи въпросителен знак
+ .*[？ʖ؟ʔ].* <casesensitive> # Символи, наподобяващи въпросителен знак
+ .*™.* <casesensitive> # TM
+ 
+ .*[\x{1D00}-\x{1DBF}].* <casesensitive> # Phonetic extensions
+ .*[\x{0250}-\x{02AF}].* <casesensitive> # IPA extensions
+ .*[∀-∑∟-∳⊂-⋕⋲-⋿∞].* <casesensitive> # Математически оператори
+ .*[\x{27C0}-\x{27ef}\x{2980}-\x{29ff}\x{2a00}-\x{2aff}].* <casesensitive> # Misc./supplemental mathematical symbols
+ .*[ⱧȢƪƪҤҺԊѓԍҥҩԌЃϓғҒЊӷⱤɌɍᵲᶉɼᵃᵍᴱᵣᔮᓂᑫᓈᒦ٨٣ץױוזשלﬨטּפּבּڠɆɇᶒⱸȺⱥᶏ١].* <casesensitive> # Letter lookalikes; none of these are currently used in any mainspace title
  
  # Други нежелани символи
- .*[\x{00A0}\x{2002}-\x{200B}\x{3000}].* <errmsg=titleblacklist-custom-nbsp> # Несекаем интервал и други необикновени разделители; използва се [[МедияУики:titleblacklist-custom-nbsp|специално съобщение за грешка]]
- .*[\x{202A}-\x{202E}].* # BiDi overrides
- .*[^\P{So}¦§©®°¶№™☀-⚲✁-➾].* # Други пунктуационни знаци, непълен списък
- .*\p{Cc}.* # Контролни символи
- .*\x{FEFF}.* # Byte order mark
+ .*[\x{00A0}\x{2002}-\x{200B}\x{3000}].* <casesensitive | errmsg=titleblacklist-custom-nbsp> # Несекаем интервал и други необикновени разделители; използва се [[МедияУики:titleblacklist-custom-nbsp|специално съобщение за грешка]]
+ .*[\x{202A}-\x{202E}].* <casesensitive> # BiDi overrides
+ .*[^\P{So}¦§©®°¶№™☀-⚲✁-➾].* <casesensitive> # Други пунктуационни знаци, непълен списък
+ .*\p{Cc}.* <casesensitive> # Контролни символи
+ .*\x{FEFF}.* <casesensitive> # Byte order mark
+ .*[卍卐☭].* <casesensitive> # Свастики, сърп и чук
  
  # Кавички в заглавията
- ^["„“”'`«»‘’‹›\x{201A}].*["„“”'`«»‘’‹›\x{201A}]$ <errmsg=titleblacklist-custom-quotes> # Заглавия, изцяло оградени в кавички; използва се [[МедияУики:titleblacklist-custom-quotes|специално съобщение за грешка]]
- ^"[^"]*$ <errmsg=titleblacklist-custom-quote1> # Заглавия, започващи с ", но без затваряща "; използва се [[МедияУики:titleblacklist-custom-quote1|специално съобщение за грешка]]
- ^„[^“]*$ <errmsg=titleblacklist-custom-quote1> # Заглавия, започващи с „, но без затваряща “; използва се [[МедияУики:titleblacklist-custom-quote1|специално съобщение за грешка]]
- ^«[^»]*$ <errmsg=titleblacklist-custom-quote1> # Заглавия, започващи с «, но без затваряща »; използва се [[МедияУики:titleblacklist-custom-quote1|специално съобщение за грешка]]
- ^‹[^›]*$ <errmsg=titleblacklist-custom-quote1> # Заглавия, започващи с ‹, но без затваряща ›; използва се [[МедияУики:titleblacklist-custom-quote1|специално съобщение за грешка]]
+ ^["„“”'`«»‘’‹›\x{201A}].*["„“”'`«»‘’‹›\x{201A}]$ <casesensitive | errmsg=titleblacklist-custom-quotes> # Заглавия, изцяло оградени в кавички; използва се [[МедияУики:titleblacklist-custom-quotes|специално съобщение за грешка]]
+ ^"[^"]*$ <casesensitive | errmsg=titleblacklist-custom-quote1> # Заглавия, започващи с ", но без затваряща "; използва се [[МедияУики:titleblacklist-custom-quote1|специално съобщение за грешка]]
+ ^„[^“]*$ <casesensitive | errmsg=titleblacklist-custom-quote1> # Заглавия, започващи с „, но без затваряща “; използва се [[МедияУики:titleblacklist-custom-quote1|специално съобщение за грешка]]
+ ^«[^»]*$ <casesensitive | errmsg=titleblacklist-custom-quote1> # Заглавия, започващи с «, но без затваряща »; използва се [[МедияУики:titleblacklist-custom-quote1|специално съобщение за грешка]]
+ ^‹[^›]*$ <casesensitive | errmsg=titleblacklist-custom-quote1> # Заглавия, започващи с ‹, но без затваряща ›; използва се [[МедияУики:titleblacklist-custom-quote1|специално съобщение за грешка]]
  
  # Забрана за създаване на страници в ИП Картинка
  ^(?:Картинка|Image|Файл|File)\:.+ <errmsg=titleblacklist-custom-image> # Използва се [[МедияУики:titleblacklist-custom-image|специално съобщение за грешка]]
  
  # Пунктуация
- .*[!?‽¿]{3,}.*
- .*[\p{Z}]{2,}.*
- .*[\p{P}]{5,}.*
+ .*[!?‽¿]{3,}.* <casesensitive>
+ .*[\p{Z}]{2,}.* <casesensitive>
+ .*[\p{P}]{5,}.* <casesensitive>
  
  # Защита от често срещани вандализми
- .*JEWS DID WTC.*
+ .*JEWS DID WTC.* <casesensitive>
  .*ON WHE.* <casesensitive>
- .*Template.*arab.*world.*unity 
- .*Шаблон.*arab.*world.*unity 
- .*Seth.*Patinkin.*
- .*Jan.*Szatkowski.*
- .*(Bill|William).*Beggs.*
- .*massive cock.*
- .*(?:http|https|ftp|mailto|torrent|ed2k)\:\/\/[\w\d:@\-]+\.[\w\d\-]+.*
- .*\bis\s+(?:a|an)\s+(?:dick|cunt|fag|bitch|shit|fuck|loser|ass|gay|ghey|moron|retard|stupid|slut).* <autoconfirmed>
- .*\bnimp\.org.*
+ .*Template.*arab.*world.*unity <casesensitive>
+ .*Шаблон.*arab.*world.*unity <casesensitive>
+ .*massive cock.* <casesensitive>
+ .*(?:http|https|ftp|mailto|torrent|ed2k)\:\/\/[\w:@\-]+\.[\w\-]+.*
+ .*\bis\s+an?\s+(?:dick|cunt|fag|bitch|shit|fuck|loser|ass|gay|ghey|moron|retard|stupid|slut|pa?edo).* <autoconfirmed>
  
  #
  # Забранени имена на потребителски сметки (бивш [[МедияУики:Usernameblacklist]])
  #
  
- .*(?i:админ).* <newaccountonly>
- .*(\bм|М)(?i:одератор).* <newaccountonly>
+ .{30,}.* <newaccountonly> # Ограничение до 29 символа
+ .* [A-ZА-Я ]{10,}.* <newaccountonly> # Не повече от 9 последователни главни букви, дори да са разделени с интервали
+ ^! <newaccountonly> # Да не започва с !
+ (!!) <newaccountonly>
  
- .*\.(com|org|co\.uk|net|info|biz|bg|Bg|BG|ru|Ru)\b.* <newaccountonly>
+ # Умишлено объркващи имена 
+ .*(?i:админ|admin).* <newaccountonly>
+ .*(?i:модератор|moderator).* <newaccountonly>
  
+ # Рекламни или пропагандни имена
+ .*\.(?i:com|org|co\.uk|net|info|biz|bg|ru|eu|tv|)\b.* <newaccountonly>
+ 
+ # Провокиращи или оскърбителни потребителски имена
  .*(?i:wikipedo).* <newaccountonly>
  .*\bNC [Ss]tate\b.*\b[Ii]s\b.* <newaccountonly>
  .*(\bb|B)(?i:etacommand).* <newaccountonly>
  .*(?i:fuquay).* <newaccountonly>
- 
- #Ограничение до 29 символа:
- .{30,}.* <newaccountonly>
- 
- #Не повече от 9 последователни главни букви, дори да са разделени с интервали.
- .* [A-ZА-Я ]{10,}.* <newaccountonly>
- 
- #Да не започва с !. 
- ^! <newaccountonly>
- (!!) <newaccountonly>
- 
- #Grawp: .*(?i:[GĜĞĠĢƓǤǦǴḠ69&Γ]((\W|\W.*\W)?[RŔŖŘȐȒṘṚṜṞ®Ρ₧ÞþΡρРрƤṔṖǷ](\W|\W.*\W)?)+([ǼAÀÁÂÃÄÅĀĂĄǍǞǠǺȀȂȦȺḀẠẢẤẦẨẪẬẮẰẲẴẶÆǢ4@?Α](\W|\W.*\W)?)+([VƲṼṾWŴẀẂẄẆẈ₩UÙÚÛÜŨŪŬŮŰŲǓǕǗǙǛΫΥΫΎ](\W|\W.*\W)?)+[PƤṔṖǷ₧ÞþΡρРр]).* <newaccountonly>
- 
- #Свастики:
- .*卍.* <newaccountonly>
- .*卐.* <newaccountonly>
+ .*(?i:[GĜĞĠĢƓǤǦǴḠ69&Γ]((\W|\W.*\W)?[RŔŖŘȐȒṘṚṜṞ®Ρ₧ÞþΡρРрƤṔṖǷ](\W|\W.*\W)?)+([ǼAÀÁÂÃÄÅĀĂĄǍǞǠǺȀȂȦȺḀẠẢẤẦẨẪẬẮẰẲẴẶÆǢ4@?Α](\W|\W.*\W)?)+([VƲṼṾWŴẀẂẄẆẈ₩UÙÚÛÜŨŪŬŮŰŲǓǕǗǙǛΫΥΫΎ](\W|\W.*\W)?)+[PƤṔṖǷ₧ÞþΡρРр]).* <newaccountonly> # Grawp
