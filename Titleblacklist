@@ -70,7 +70,7 @@
  .*(?i:модератор|moderator).* <newaccountonly>
  
  # Рекламни или пропагандни имена
- .*\.(?i:com|org|co\.uk|net|info|biz|bg|ru|eu|tv|)\b.* <newaccountonly>
+ # .*\.(?i:com|org|co\.uk|net|info|biz|bg|ru|eu|tv|)\b.* <newaccountonly>
  
  # Провокиращи или оскърбителни потребителски имена
  .*(?i:wikipedo).* <newaccountonly>
