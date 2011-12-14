@@ -19,7 +19,7 @@
  .*[\x{0250}-\x{02AF}].* <casesensitive> # IPA extensions
  .*[∀-∑∟-∳⊂-⋕⋲-⋿∞].* <casesensitive> # Математически оператори
  .*[\x{27C0}-\x{27ef}\x{2980}-\x{29ff}\x{2a00}-\x{2aff}].* <casesensitive> # Misc./supplemental mathematical symbols
- .*[ⱧȢƪƪԊԍԌϓᵲᶉɼᵃᵍᴱᵣﬨɆɇᶒⱸȺⱥᶏ].* <casesensitive> # Letter lookalikes; none of these are currently used in any mainspace title
+ .*[ⱧȢƪƪϓᵲᶉɼᵃᵍᴱᵣﬨɆɇᶒⱸȺⱥᶏ].* <casesensitive> # Letter lookalikes; none of these are currently used in any mainspace title
  
  .*[a-z][а-я].* <errmsg=titleblacklist-custom-cyrlat> # Кирилски и латински букви в една дума; използва се [[МедияУики:titleblacklist-custom-cyrlat|специално съобщение за грешка]]
  .*[а-я][a-z].* <errmsg=titleblacklist-custom-cyrlat> # Кирилски и латински букви в една дума; използва се [[МедияУики:titleblacklist-custom-cyrlat|специално съобщение за грешка]]
