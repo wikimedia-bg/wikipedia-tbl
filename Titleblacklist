@@ -24,6 +24,9 @@
  .*[a-z][а-я].* <errmsg=titleblacklist-custom-cyrlat> # Кирилски и латински букви в една дума; използва се [[МедияУики:titleblacklist-custom-cyrlat|специално съобщение за грешка]]
  .*[а-я][a-z].* <errmsg=titleblacklist-custom-cyrlat> # Кирилски и латински букви в една дума; използва се [[МедияУики:titleblacklist-custom-cyrlat|специално съобщение за грешка]]
  
+ # Забрана на mdash (дълго тире) в заглавията
+ .*—.* <errmsg=titleblacklist-custom-mdash> # Дълго тире (mdash) в заглавието; използва се [[МедияУики:titleblacklist-custom-mdash|специално съобщение за грешка]]
+ 
  # Други нежелани символи
  .*[\x{00A0}\x{2002}-\x{200B}\x{3000}].* <casesensitive | errmsg=titleblacklist-custom-nbsp> # Несекаем интервал и други необикновени разделители; използва се [[МедияУики:titleblacklist-custom-nbsp|специално съобщение за грешка]]
  .*[\x{202A}-\x{202E}].* <casesensitive> # BiDi overrides
