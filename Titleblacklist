@@ -59,6 +59,9 @@
  .*(?:http|https|ftp|mailto|torrent|ed2k)\:\/\/[\w:@\-]+\.[\w\-]+.*
  .*\bis\s+an?\s+(?:dick|cunt|fag|bitch|shit|fuck|loser|ass|gay|ghey|moron|retard|stupid|slut|pa?edo).* <autoconfirmed>
  
+ # Многогодишно упорито самонахалство: [[Фотин николай]], [[Фотин-Николай Сарафов]], [[Потребител:Фотин-Николай Сарафов]]
+ .*фотин\bниколай.*
+ 
  #
  # Забранени имена на потребителски сметки (бивш [[МедияУики:Usernameblacklist]])
  #
